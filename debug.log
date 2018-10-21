@@ -1,0 +1,8 @@
+[1020/081144.597:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir14916_16750\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1020/085323.998:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir14508_24409\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1020/212848.025:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir13568_9043\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1021/092114.779:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir15284_864\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1021/123759.759:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir7836_23643\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1021/123949.783:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir10320_8382\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1021/181106.822:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir8384_8733\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[1021/182321.056:ERROR:file_io_win.cc(179)] CreateFile C:\Users\vj\AppData\Local\Temp\scoped_dir19700_12639\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
