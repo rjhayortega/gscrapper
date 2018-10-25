@@ -1,6 +1,6 @@
 <?php
 error_reporting("E_ALL");
-$servername = "localhost:3307";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "gscrapper";

@@ -56,7 +56,125 @@
 
         <!--Import jQuery-->
         <link rel="stylesheet" href="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/bootstrap.css">
-        <script type="text/javascript" id="www-widgetapi-script" src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/www-widgetapi.js" async=""></script><script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/iframe_api.js"></script><script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/jquery.js"></script>
+     
+		
+
+<script language="javascript" type="text/javascript">
+		var cont = true;
+		  var addresses = [];
+           var results = '<ul class="tree">';
+           var count = 0;
+			var rounds = 0;
+			var myID = "";
+		   var myVar;
+		   
+		   
+		 function myTimer() {
+
+
+doSend("1,"+myID);
+/*
+	console.log(myID);
+    $.ajax({
+                   type: 'GET',
+                    url: 'test.php?f='+myID,
+                    async: false,
+                 
+                    success: done,
+                    error: function(e) {
+                       console.log('First XHR: ' + e.message);
+                    }
+                });
+				*/
+}
+  
+
+  function init()
+  {
+	
+  }
+
+  function doConnect()
+  {
+
+    websocket = new WebSocket("ws://3.16.5.15:8000/");
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
+
+  function onOpen(evt)
+  {
+
+
+
+	
+  }
+
+  function onClose(evt)
+  {
+    writeToScreen("disconnected\n");
+	
+  }
+
+  function onMessage(evt)
+  {
+	var tmp = evt.data;
+	var tmp1 = tmp.split(",");
+
+	if(tmp1[0]=="11"){
+	myID = tmp1[1].trim();
+	myVar = setInterval(myTimer, 6000);
+
+	
+	}
+	
+	else{
+		
+	done(tmp1[1]);
+	
+	}
+   
+  }
+
+  function onError(evt)
+  {
+    alert('error: ' + evt.data + '\n');
+
+	websocket.close();
+
+	
+  }
+
+  function doSend(message)
+  {
+    
+    websocket.send(message);
+  }
+
+  function writeToScreen(message)
+  {
+   
+  }
+
+
+   function sendText() {
+		doSend( document.myform.inputtext.value );
+   }
+
+ 
+   function doDisconnect() {
+		websocket.close();
+   }
+
+   doConnect();
+
+</script>
+
+
+
+	 <script type="text/javascript" id="www-widgetapi-script" src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/www-widgetapi.js" async=""></script><script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/iframe_api.js"></script><script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/jquery.js"></script>
         <script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/bootstrap.js"></script>
 
         <script src="Negative%20Keyword%20Pro%20-%20Create%20massive%20negative%20keyword%20lists%20in%20minutes!_files/json2.js"></script>
@@ -218,7 +336,7 @@ of your campaign.</p>
 
             <div class="final-result" style="">
 
-            <h3><span id="total_suggestions">540</span> Results found!<span class="label label-success" style="display: none;"></span></h3>
+            <h3><span id="total_suggestions"></span></h3>
             <!-- begin result -->
             <div id="result" class="row">
 
@@ -236,17 +354,8 @@ of your campaign.</p>
 
 								<!-- results here -->
                 <table id="table-results">
-                <!--
-                <ul class="tree">
-
-                <li><input class="add-right" onchange="addtoright(this)" value="robotics" type="checkbox"><span>robotics</span></li><li><input class="add-right" onchange="addtoright(this)" value="roboto font" checked="checked" type="checkbox"><span>roboto font</span></li><ul><li>
-
-
-
-                <!--roboto</span></li><li><input class="add-right" onchange="addtoright(this)" value="font" type="checkbox"><span>font</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="on the road" type="checkbox"><span>on the road</span></li><ul><li><input class="add-right" onchange="addtoright(this)" value="on" type="checkbox"><span>on</span></li><li><input class="add-right" onchange="addtoright(this)" value="the" type="checkbox"><span>the</span></li><li><input class="add-right" onchange="addtoright(this)" value="road" type="checkbox"><span>road</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="drawing" type="checkbox"><span>drawing</span></li><li><input class="add-right" onchange="addtoright(this)" value="framework" type="checkbox"><span>framework</span></li><li><input class="add-right" onchange="addtoright(this)" value="roboto font download" type="checkbox"><span>roboto font download</span></li><ul><li><input class="add-right" onchange="addtoright(this)" value="roboto" type="checkbox"><span>roboto</span></li><li><input class="add-right" onchange="addtoright(this)" value="font" type="checkbox"><span>font</span></li><li><input class="add-right" onchange="addtoright(this)" value="download" type="checkbox"><span>download</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="costume" type="checkbox"><span>costume</span></li><li><input class="add-right" onchange="addtoright(this)" value="robotic process automation" type="checkbox"><span>robotic process automation</span></li><ul><li><input class="add-right" onchange="addtoright(this)" value="robotic" type="checkbox"><span>robotic</span></li><li><input class="add-right" onchange="addtoright(this)" value="process" type="checkbox"><span>process</span></li><li><input class="add-right" onchange="addtoright(this)" value="automation" type="checkbox"><span>automation</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="movies" type="checkbox"><span>movies</span></li><li><input class="add-right" onchange="addtoright(this)" value="vacuum" type="checkbox"><span>vacuum</span></li><li><input class="add-right" onchange="addtoright(this)" value="robotech" type="checkbox"><span>robotech</span></li><li><input class="add-right" onchange="addtoright(this)" value="robotics definition" type="checkbox"><span>robotics definition</span></li><ul><li><input class="add-right" onchange="addtoright(this)" value="robotics" type="checkbox"><span>robotics</span></li><li><input class="add-right" onchange="addtoright(this)" value="definition" type="checkbox"><span>definition</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="cartoon" type="checkbox"><span>cartoon</span></li><li><input class="add-right" onchange="addtoright(this)" value="robotic arm" type="checkbox"><span>robotic arm</span></li><ul><li><input class="add-right" onchange="addtoright(this)" value="robotic" type="checkbox"><span>robotic</span></li><li><input class="add-right" onchange="addtoright(this)" value="arm" type="checkbox"><span>arm</span></li></ul><li><input class="add-right" onchange="addtoright(this)" value="chicken" type="checkbox"><span>chicken</span></li><li><input class="add-right" onchange="addtoright(this)" value="clipart" type="checkbox"><span>clipart</span></li><li><input class="add-right" onchange="addtoright(this)" value="restaurant" type="checkbox"><span>restaurant</span></li><li><input class="add-right" onchange="addtoright(this)" value="robots.txt" type="checkbox"><span>robots.txt</span></li><li><input class="add-right" onchange="addtoright(this)" value="dance" type="checkbox"><span>dance</span></li><li><input class="add-right" onchange="addtoright(this)" value="meaning" type="checkbox"><span>meaning</span></li>-->
-
-
-                </ul>
+              
+             
 </table>
                 <table id="table-results-sub">
 								</table>
@@ -399,13 +508,7 @@ function charArray(charA, charZ) {
 			
 
                 
-		  var cont = true;
-		  var addresses = [];
-           var results = '<ul class="tree">';
-           var count = 0;
-			var rounds = 0;
-			var myID = "";
-		   
+		
 		   
 		       function check(json) {
 					
@@ -415,7 +518,7 @@ function charArray(charA, charZ) {
 				if(n<=0){
 				
 				myID = json.trim();
-				alert(myID);
+				//alert(myID);
 				
 				}
 				
@@ -431,7 +534,7 @@ function charArray(charA, charZ) {
 		   
                 function done(json) {
 					
-                var data= json;
+                var data = json;
 				console.log(data);
                 window.mainctr = 0;
                   
@@ -444,9 +547,7 @@ function charArray(charA, charZ) {
 			   
 			   rounds += 1;
 			   
-               var n = data.indexOf("0 results");
-			      
-				if(n<=0){
+             			
 
 					  var arr = data.split('%');
 
@@ -475,15 +576,11 @@ function charArray(charA, charZ) {
                       }
 
 				
-                      $('#total_suggestions').text(count);
+                      $('#total_suggestions').text(count+"  Results found!");
                       $('#table-results').append(results);
 				
-				if(rounds>=6){
-				//clearInterval(myVar);
-				}
-				
-				
-				}
+			
+		
                   
 
                 }
@@ -504,25 +601,12 @@ function suggestionlimitlabel(results) {
 
   
     // added by joven (09/01/2018) show limit message
-    $('#limitmsg').show();
-    $('#limitcount').text(total_suggestions);
+    //$('#limitmsg').show();
+    //$('#limitcount').text(total_suggestions);
 }
 
 
-var myVar;
-function myTimer() {
 
-    $.ajax({
-                   type: 'GET',
-                    url: 'test.php?f='+myID,
-                    async: false,
-                 
-                    success: done,
-                    error: function(e) {
-                       console.log('First XHR: ' + e.message);
-                    }
-                });
-}
 
 			</script>
 			
@@ -539,6 +623,7 @@ function myTimer() {
 						}
 
             else{
+				
 				alert(myID);
 				
                 $('#table-results').html("");
@@ -546,7 +631,11 @@ function myTimer() {
 				results = "";
                 count = 0;
 				rounds = 0;
-                var suggest_url = "add.php?kw="+$('#query').val()+"&f="+myID;
+				
+				doSend("0,"+$('#query').val());
+				
+              
+				/*var suggest_url = "add.php?kw="+$('#query').val()+"&f="+myID;
                 // console.log(suggest_url);
 				cont = true;
                 $.ajax({
@@ -559,14 +648,23 @@ function myTimer() {
                        console.log('First XHR: ' + e.message);
                     }
                 });
-				
-				myVar = setInterval(myTimer, 1000);
-
+				*/
+		
             }
 					});
 			})();
 		</script>
-    
+		
+		
+
+
+<div id="output"></div>
+
+		
+		
+		
+		
+		
 
 
 <!-- Begin: Global tracking -->
